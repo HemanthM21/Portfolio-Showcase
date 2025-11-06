@@ -1322,7 +1322,7 @@ footer {
     }
 
     .menu-overlay-links a {
-        font-size: clamp(40px, 7vw, 65px);
+        font-size: clamp(30px, 6vw, 55px);
     }
 
     .menu-overlay-footer {
