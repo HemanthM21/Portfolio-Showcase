@@ -356,7 +356,7 @@ nav {
 
 @media (max-width: 1024px) {
     .menu-overlay {
-        padding-top: 150px !important; /* Moves menu content slightly down */
+        padding-top: 190px !important; /* Moves menu content slightly down */
     }
 }
 
