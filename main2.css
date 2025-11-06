@@ -1464,10 +1464,38 @@ footer {
         margin-bottom: 30px;
         line-height: 1.5;
     }
-    
+        .menu-overlay {
+        padding: 140px 30px 0 !important; /* Move menu down */
+    }
+
+    .menu-overlay-links a {
+        font-size: clamp(28px, 8vw, 42px) !important; /* Slightly smaller font */
+        line-height: 1.1;
+    }
+
+    .menu-overlay-footer {
+        bottom: 50px !important; /* Prevents footer overlap */
+    }
+
 }
 
 @media (max-width: 400px) {
+    /* ✅ Added menu overlay adjustments */
+    .menu-overlay {
+        padding: 130px 25px 0 !important; /* move text a bit lower */
+    }
+
+    .menu-overlay-links a {
+        font-size: clamp(26px, 8vw, 38px) !important; /* smoother font sizing for small screens */
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
+
+    .menu-overlay-footer {
+        bottom: 40px !important; /* prevents footer overlap */
+        left: 25px !important;
+    }
+
     #certificates {
         padding-top: 90px !important;
         padding-bottom: 60px !important;
@@ -1484,3 +1512,4 @@ footer {
         line-height: 1.1;
     }
 }
+
