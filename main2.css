@@ -1318,7 +1318,7 @@ footer {
 /* Responsive */
 @media (max-width: 1024px) {
     .menu-overlay {
-        padding: 0 60px;
+        padding: 120px 60px 0;
     }
 
     .menu-overlay-links a {
