@@ -1318,17 +1318,18 @@ footer {
 /* Responsive */
 @media (max-width: 1024px) {
     .menu-overlay {
-        padding: 0 60px;
+        padding: 120px 60px 0; 
     }
 
     .menu-overlay-links a {
-        font-size: clamp(40px, 7vw, 45px);
+        font-size: clamp(35px, 5vw, 50px); 
     }
 
     .menu-overlay-footer {
         left: 60px;
     }
 }
+
 
 @media (max-width: 768px) {
     body {
