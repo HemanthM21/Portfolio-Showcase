@@ -354,6 +354,13 @@ nav {
     transform: scale(1.2);
 }
 
+@media (max-width: 1024px) {
+    .menu-overlay {
+        padding-top: 120px !important; /* Moves menu content slightly down */
+    }
+}
+
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
