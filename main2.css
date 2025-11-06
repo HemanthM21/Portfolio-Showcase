@@ -1316,22 +1316,19 @@ footer {
 }
 
 /* Responsive */
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .menu-overlay {
-        padding: 120px 60px 0 !important; /* push down more */
+        padding: 0 60px;
     }
 
     .menu-overlay-links a {
-        font-size: clamp(32px, 5vw, 45px) !important; /* definitely smaller */
-        line-height: 1.1;
+        font-size: clamp(40px, 7vw, 45px);
     }
 
     .menu-overlay-footer {
-        left: 60px !important;
-        bottom: 50px !important;
+        left: 60px;
     }
 }
-
 
 @media (max-width: 768px) {
     body {
