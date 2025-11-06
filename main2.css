@@ -1315,7 +1315,7 @@ footer {
     transition: transform 0.5s ease-out;
 }
 
-
+/* Responsive */
 @media (max-width: 1024px) {
     .menu-overlay {
         padding: 0 60px;
@@ -1366,7 +1366,7 @@ footer {
     /* Certificates section spacing for mobile/tablet */
     #certificates {
         padding-top: 120px !important;
-        margin-top: 120px !important; 
+        margin-top: 120px !important; /* extra separation from previous section */
     }
 
     #certificates .section-title {
@@ -1465,17 +1465,18 @@ footer {
         line-height: 1.5;
     }
         .menu-overlay {
-        padding: 140px 30px 0 !important; 
+        padding: 140px 30px 0 !important; /* Move menu down */
     }
 
     .menu-overlay-links a {
-        font-size: clamp(28px, 8vw, 42px) !important; 
+        font-size: clamp(28px, 8vw, 42px) !important; /* Slightly smaller font */
         line-height: 1.1;
     }
 
     .menu-overlay-footer {
-        bottom: 50px !important; 
+        bottom: 50px !important; /* Prevents footer overlap */
     }
+
 }
 
 @media (max-width: 400px) {
