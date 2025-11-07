@@ -1270,7 +1270,7 @@ footer {
     }
 
     .menu-overlay-links {
-        margin-bottom: 70px;
+        margin-bottom: 60px;
     }
 
     .menu-overlay-links li {
@@ -1279,7 +1279,7 @@ footer {
 
     .menu-overlay-links a {
         font-size: 55px;
-        letter-spacing: -5px;
+        letter-spacing: -9px;
         line-height: 1.1;
     }
 
@@ -1351,7 +1351,7 @@ footer {
     }
 
     .menu-overlay-links {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 
     .menu-overlay-links li {
@@ -1477,7 +1477,7 @@ footer {
 
     .menu-overlay-links {
         margin-bottom: 40px;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .menu-overlay-links li {
@@ -1485,7 +1485,7 @@ footer {
     }
 
     .menu-overlay-links a {
-        font-size: clamp(32px, 9vw, 48px) !important;
+        font-size: clamp(25px, 9vw, 38px) !important;
         line-height: 1.2;
         letter-spacing: -2px;
     }
@@ -1565,7 +1565,7 @@ footer {
 
     .menu-overlay-links {
         margin-top: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .menu-overlay-links li {
