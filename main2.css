@@ -1316,7 +1316,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .menu-overlay {
         padding: 0 50px;
     }
@@ -1328,7 +1328,7 @@ footer {
     .menu-overlay-footer {
         left: 60px;
     }
-}
+} */
 
 @media (max-width: 768px) {
     body {
