@@ -1270,7 +1270,7 @@ footer {
     }
 
     .menu-overlay-links {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 
     .menu-overlay-links li {
@@ -1285,7 +1285,7 @@ footer {
 
     .menu-overlay-footer {
         left: 120px;
-        bottom: 80px;
+        bottom: 70px;
     }
 }
 
