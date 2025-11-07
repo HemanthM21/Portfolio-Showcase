@@ -1316,20 +1316,79 @@ footer {
 }
 
 /* Responsive */
+/* Desktop/Large Screens (default - no media query needed, but for clarity) */
+@media (min-width: 1025px) {
+    .menu-overlay {
+        padding: 0 80px;
+    }
+
+    .menu-overlay-links {
+        gap: 40px;
+    }
+
+    .menu-overlay-links a {
+        font-size: clamp(60px, 5vw, 90px);
+        letter-spacing: -3px;
+        line-height: 1.1;
+    }
+
+    .menu-overlay-footer {
+        left: 80px;
+        bottom: 80px;
+        font-size: 16px;
+    }
+}
+
+/* Large Desktop/4K Screens */
+@media (min-width: 1440px) {
+    .menu-overlay {
+        padding: 0 100px;
+    }
+
+    .menu-overlay-links a {
+        font-size: clamp(70px, 5vw, 100px);
+    }
+
+    .menu-overlay-footer {
+        left: 100px;
+        bottom: 100px;
+        font-size: 18px;
+    }
+}
+
+/* Ultra-wide/4K+ Screens */
+@media (min-width: 1920px) {
+    .menu-overlay {
+        padding: 0 120px;
+    }
+
+    .menu-overlay-links a {
+        font-size: clamp(80px, 5vw, 110px);
+    }
+
+    .menu-overlay-footer {
+        left: 120px;
+        bottom: 120px;
+    }
+}
+
+/* Tablet/Small Laptop */
 @media (max-width: 1024px) {
     .menu-overlay {
         padding: 0 60px;
     }
 
     .menu-overlay-links a {
-        font-size: clamp(30px, 6vw, 55px);
+        font-size: clamp(35px, 6vw, 60px);
     }
 
     .menu-overlay-footer {
         left: 60px;
+        bottom: 60px;
     }
 }
 
+/* Tablet */
 @media (max-width: 768px) {
     body {
         cursor: auto;
@@ -1344,29 +1403,33 @@ footer {
     }
 
     .menu-overlay {
-        padding: 0 30px;
+        padding: 100px 30px 0;
+    }
+
+    .menu-overlay-links {
+        gap: 25px;
     }
 
     .menu-overlay-links a {
-        font-size: clamp(40px, 12vw, 70px);
+        font-size: clamp(35px, 9vw, 65px);
         letter-spacing: -2px;
+        line-height: 1.2;
     }
 
     .menu-overlay-footer {
         flex-direction: column;
         gap: 20px;
         left: 30px;
-        bottom: 40px;
+        bottom: 50px;
     }
 
     .hero, section {
         padding: 80px 30px;
     }
 
-    /* Certificates section spacing for mobile/tablet */
     #certificates {
         padding-top: 120px !important;
-        margin-top: 120px !important; /* extra separation from previous section */
+        margin-top: 120px !important;
     }
 
     #certificates .section-title {
@@ -1411,11 +1474,36 @@ footer {
     }
 }
 
+/* Mobile Large */
 @media (max-width: 480px) {
+    nav {
+        padding: 20px 25px;
+    }
+
+    .menu-overlay {
+        padding: 120px 25px 0 !important;
+    }
+
+    .menu-overlay-links {
+        gap: 20px;
+    }
+
+    .menu-overlay-links a {
+        font-size: clamp(30px, 8.5vw, 45px) !important;
+        line-height: 1.15;
+        letter-spacing: -1.5px;
+    }
+
+    .menu-overlay-footer {
+        bottom: 40px !important;
+        left: 25px !important;
+        gap: 15px;
+    }
+
     #certificates {
         padding-top: 100px !important;
         padding-bottom: 70px !important;
-        margin-top: 140px !important; 
+        margin-top: 140px !important;
         min-height: auto !important;
     }
 
@@ -1451,7 +1539,7 @@ footer {
 
     #contact {
         padding-top: 120px !important;
-        margin-top: 80px !important; 
+        margin-top: 80px !important;
     }
 
     .contact-title {
@@ -1464,42 +1552,34 @@ footer {
         margin-bottom: 30px;
         line-height: 1.5;
     }
-        .menu-overlay {
-        padding: 140px 30px 0 !important; /* Move menu down */
-    }
-
-    .menu-overlay-links a {
-        font-size: clamp(28px, 8vw, 42px) !important; /* Slightly smaller font */
-        line-height: 1.1;
-    }
-
-    .menu-overlay-footer {
-        bottom: 50px !important; /* Prevents footer overlap */
-    }
-
 }
 
-@media (max-width: 400px) {
-    /* ✅ Added menu overlay adjustments */
+/* Mobile Medium */
+@media (max-width: 412px) {
     .menu-overlay {
-        padding: 130px 25px 0 !important; /* move text a bit lower */
+        padding: 110px 20px 0 !important;
+    }
+
+    .menu-overlay-links {
+        gap: 18px;
     }
 
     .menu-overlay-links a {
-        font-size: clamp(26px, 8vw, 38px) !important; /* smoother font sizing for small screens */
+        font-size: clamp(28px, 8vw, 40px) !important;
         line-height: 1.1;
         letter-spacing: -1px;
     }
 
     .menu-overlay-footer {
-        bottom: 40px !important; /* prevents footer overlap */
-        left: 25px !important;
+        bottom: 35px !important;
+        left: 20px !important;
+        font-size: 13px;
     }
 
     #certificates {
         padding-top: 90px !important;
         padding-bottom: 60px !important;
-        margin-top: 160px !important; 
+        margin-top: 160px !important;
     }
 
     #contact {
@@ -1513,3 +1593,29 @@ footer {
     }
 }
 
+/* Mobile Small */
+@media (max-width: 375px) {
+    .menu-overlay {
+        padding: 100px 20px 0 !important;
+    }
+
+    .menu-overlay-links a {
+        font-size: clamp(26px, 7.5vw, 38px) !important;
+    }
+}
+
+/* Mobile Extra Small */
+@media (max-width: 320px) {
+    .menu-overlay {
+        padding: 90px 15px 0 !important;
+    }
+
+    .menu-overlay-links a {
+        font-size: clamp(24px, 7vw, 35px) !important;
+    }
+
+    .menu-overlay-footer {
+        font-size: 12px;
+        bottom: 30px !important;
+    }
+}
