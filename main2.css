@@ -1338,7 +1338,7 @@ footer {
     }
 
     .menu-overlay-links a {
-        font-size: clamp(55px, 4.5vw, 85px);
+        font-size: clamp(55px, 4.5vw, 65px);
         letter-spacing: -3px;
         line-height: 1.1;
     }
@@ -1370,7 +1370,7 @@ footer {
     }
 
     .menu-overlay-links a {
-        font-size: clamp(65px, 4.5vw, 95px);
+        font-size: clamp(65px, 4.5vw, 75px);
     }
 
     .menu-overlay-footer {
@@ -1389,7 +1389,7 @@ footer {
     }
 
     .menu-overlay-links a {
-        font-size: clamp(75px, 4.5vw, 105px);
+        font-size: clamp(75px, 4.5vw, 85px);
     }
 
     .menu-overlay-footer {
