@@ -1270,7 +1270,7 @@ footer {
     }
 
     .menu-overlay-links {
-        margin-bottom: 450px;
+        margin-bottom: 45px;
     }
 
     .menu-overlay-links li {
@@ -1279,7 +1279,7 @@ footer {
 
     .menu-overlay-links a {
         font-size: 55px;
-        letter-spacing: -1px;
+        letter-spacing: -2px;
         line-height: 1.1;
     }
 
@@ -1306,7 +1306,7 @@ footer {
 
     .menu-overlay-links a {
         font-size: 65px;
-        letter-spacing: -4px;
+        letter-spacing: -2px;
         line-height: 1.1;
     }
 
@@ -1333,7 +1333,7 @@ footer {
 
     .menu-overlay-links a {
         font-size: 45px;
-        letter-spacing: -4px;
+        letter-spacing: -2px;
         line-height: 1.1;
     }
 
