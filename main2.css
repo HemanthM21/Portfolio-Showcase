@@ -631,6 +631,10 @@ section {
     z-index: 1;
 }
 
+.project-card .project-image {
+    filter: brightness(1);
+}
+
 @keyframes shimmer {
     0%, 100% { opacity: 0.5; }
     50% { opacity: 1; }
