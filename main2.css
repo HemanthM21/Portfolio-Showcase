@@ -618,21 +618,14 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(1.15) contrast(1.1) saturate(1.1); /* Makes image brighter, sharper, more vibrant */
+    filter: brightness(1.25) contrast(1.2) saturate(1.2); /* Super bright! */
     position: relative;
-    z-index: 2; /* Places image above the shimmer effect */
+    z-index: 2;
 }
 
-/* Remove or reduce the overlay that's making it look faded */
+/* Optional: Remove shimmer completely for maximum clarity */
 .project-image::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 70%); /* Reduced from 0.08 to 0.03 */
-    animation: shimmer 3s infinite;
-    z-index: 1; /* Keep shimmer below image */
-    pointer-events: none;
+    display: none; /* Removes shimmer effect entirely */
 }
 
 @keyframes shimmer {
@@ -642,12 +635,6 @@ section {
     50% {
         opacity: 0.5; /* Reduced from 1 */
     }
-}
-
-/* Optional: Even brighter on hover */
-.project-card:hover .project-image img {
-    filter: brightness(1.2) contrast(1.15) saturate(1.15);
-    transform: scale(1.05);
 }
 
 .project-content {
