@@ -1,19 +1,50 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     const splashScreen = document.getElementById('splashScreen');
     const mainContent = document.getElementById('mainContent');
-    
-    setTimeout(function() {
+
+    setTimeout(function () {
         splashScreen.classList.add('fade-out');
         mainContent.classList.add('show');
     }, 2500);
-    
-    setTimeout(function() {
+
+    setTimeout(function () {
         splashScreen.style.display = 'none';
     }, 3300);
 });
 
 // project data
 const projects = {
+    project0: {
+        title: "MindGrid — AI-Powered Life Operating System",
+        image: "images/mindgrid.png", // replace with your actual screenshot path
+        icon: "🧠",
+        description: "MindGrid is an AI-powered personal productivity OS designed to understand a user’s life, not just their tasks. It unifies task management, document intelligence, and psychological journaling into one intelligent system that analyzes behavior, priorities, and thoughts to deliver personalized productivity insights.",
+        features: [
+            "AI-assisted task creation and smart prioritization",
+            "Document intelligence using OCR for bills, receipts, and tickets",
+            "Automatic reminder generation from documents and deadlines",
+            "AI-powered journaling with mood detection and behavior insights",
+            "Centralized dashboard with animated cards and activity feed",
+            "Secure JWT-based authentication with Google OAuth support",
+            "Real-time insights and personalized productivity suggestions",
+            "Responsive, modern UI with smooth animations"
+        ],
+        technologies: [
+            "React",
+            "Vite",
+            "Framer Motion",
+            "Node.js",
+            "Express.js",
+            "MongoDB Atlas",
+            "JWT Authentication",
+            "Google OAuth",
+            "OCR & AI APIs"
+        ],
+        challenges: "The biggest challenge was designing a system that combines multiple domains—tasks, documents, and journaling—into a single coherent user experience. Managing AI-driven insights, authentication flows, and real-time UI updates required careful state management and clean API architecture. This was addressed by modular backend routes, token-based authentication, and a component-driven frontend with animation orchestration.",
+        role: "Full Stack Developer & Product Architect — Led the end-to-end development from system design to deployment. Built frontend UI with React and Framer Motion, implemented backend APIs with Node.js and Express, integrated MongoDB Atlas, handled authentication, and coordinated AI-driven features.",
+        liveDemo: "https://mindgrid-three.vercel.app/",
+        viewCode: "https://github.com/HemanthM21/MINDGRID"
+    },
     project1: {
         title: "Wanderly - Travel Discovery Platform",
         image: "images/Screenshot 2025-06-23 152629.png",
@@ -33,7 +64,7 @@ const projects = {
         technologies: ["Node.js", "Express.js", "MongoDB", "EJS Templates", "Bootstrap", "Cloudinary", "Mapbox", "Passport.js", "MVC Architecture"],
         challenges: "The primary challenge was architecting a scalable MVC structure while implementing secure authentication flows and managing complex data relationships between users, listings, and reviews. I solved this by implementing Passport.js for authentication, designing efficient MongoDB schemas with proper referencing, and integrating middleware for request validation.",
         role: "Full Stack Developer & Architect - Designed the complete application architecture from database schema to frontend implementation. Built RESTful APIs, implemented secure authentication flows, integrated third-party services (Cloudinary, Mapbox), and crafted a responsive UI.",
-        liveDemo: "https://wanderly-project.onrender.com",  
+        liveDemo: "https://wanderly-project.onrender.com",
         viewCode: "https://github.com/HemanthM21/wanderly-project"
     },
     project2: {
@@ -271,12 +302,12 @@ document.addEventListener('mousemove', (e) => {
 function animateCursor() {
     cursorX += (mouseX - cursorX) * 0.2;
     cursorY += (mouseY - cursorY) * 0.2;
-    
+
     cursor.style.left = mouseX + 'px';
     cursor.style.top = mouseY + 'px';
     follower.style.left = cursorX + 'px';
     follower.style.top = cursorY + 'px';
-    
+
     requestAnimationFrame(animateCursor);
 }
 animateCursor();
@@ -301,7 +332,7 @@ function toggleMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
     menuOverlay.classList.toggle('active');
     menuToggle.classList.toggle('active');
-    
+
     if (menuOverlay.classList.contains('active')) {
         document.body.style.overflow = 'hidden';
     } else {
@@ -316,9 +347,9 @@ function menuNavigate(sectionId) {
     menuOverlay.classList.remove('active');
     menuToggle.classList.remove('active');
     document.body.style.overflow = 'auto';
-    
+
     scrollToSection(sectionId);
-    
+
     const menuLinks = document.querySelectorAll('.menu-overlay-links a');
     menuLinks.forEach(link => link.classList.remove('active-link'));
     event.target.classList.add('active-link');
@@ -341,13 +372,13 @@ function scrollToSection(sectionId) {
 function openModal(projectId) {
     const project = projects[projectId];
     const modal = document.getElementById('projectModal');
-    
+
     const modalContent = modal.querySelector('.modal-content');
     if (modalContent) {
         modalContent.scrollTop = 0;
     }
     modal.scrollTop = 0;
-    
+
     document.getElementById('modalTitle').textContent = project.title;
 
     const modalTitle = document.getElementById('modalTitle');
@@ -395,13 +426,13 @@ function openModal(projectId) {
         <h3>My Role</h3>
         <p>${project.role}</p>
     `;
-    
+
     document.getElementById('modalDetails').innerHTML = detailsHTML;
     document.getElementById('modalLinks').innerHTML = `
         <a href="${project.liveDemo}" target="_blank" class="modal-btn">Live Demo</a>
         <a href="${project.viewCode}" target="_blank" class="modal-btn secondary">View Code</a>
     `;
-    
+
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
@@ -417,22 +448,22 @@ function closeModal() {
 function openCertificateModal(certId) {
     const cert = certificates[certId];
     const modal = document.getElementById('certificateModal');
-    
+
     const modalContent = modal.querySelector('.modal-content');
     if (modalContent) {
         modalContent.scrollTop = 0;
     }
     modal.scrollTop = 0;
-    
+
     document.getElementById('certModalTitle').textContent = cert.title;
-    
+
     const certImageElement = document.getElementById('certModalImage');
     if (cert.image) {
         certImageElement.innerHTML = `<img src="${cert.image}" alt="${cert.title}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 15px;">`;
     } else {
         certImageElement.textContent = cert.icon;
     }
-    
+
     let detailsHTML = `
         <div style="margin-bottom: 1.5rem;">
             <p style="font-size: 1.1rem; color: #f7931e; margin-bottom: 0.5rem;"><strong>Issued by:</strong> ${cert.issuer}</p>
@@ -446,9 +477,9 @@ function openCertificateModal(certId) {
             ${cert.skills.map(skill => `<li>${skill}</li>`).join('')}
         </ul>
     `;
-    
+
     document.getElementById('certModalDetails').innerHTML = detailsHTML;
-    
+
     if (cert.credentialUrl && cert.credentialUrl !== '#') {
         document.getElementById('certModalLinks').innerHTML = `
             <a href="${cert.credentialUrl}" target="_blank" class="modal-btn">View Credential</a>
@@ -456,7 +487,7 @@ function openCertificateModal(certId) {
     } else {
         document.getElementById('certModalLinks').innerHTML = '';
     }
-    
+
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
@@ -467,10 +498,10 @@ function closeCertificateModal() {
     certModal.classList.remove('active');
 
     if (window.fromExtraCertificates) {
-        window.fromExtraCertificates = false; 
+        window.fromExtraCertificates = false;
         openAllCertificatesModal();
     } else {
-        document.body.style.overflow = 'auto'; 
+        document.body.style.overflow = 'auto';
     }
 }
 
@@ -479,7 +510,7 @@ function closeAllCertificatesModal() {
     const modal = document.getElementById('allCertificatesModal');
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
-    window.fromExtraCertificates = false; 
+    window.fromExtraCertificates = false;
 }
 
 // extra certificate modal - ONLY IMAGE
@@ -587,14 +618,14 @@ function openAllCertificatesModal() {
     document.body.style.overflow = 'hidden';
 
     window.extraCertificatesData = extraCertificates;
-    window.fromExtraCertificates = false; 
+    window.fromExtraCertificates = false;
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
     const projectModal = document.getElementById('projectModal');
     const certModal = document.getElementById('certificateModal');
     const allCertsModal = document.getElementById('allCertificatesModal');
-    
+
     if (event.target == projectModal) {
         closeModal();
     }
@@ -607,13 +638,13 @@ window.onclick = function(event) {
 }
 
 // Close modals on Escape key
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
         const projectModal = document.getElementById('projectModal');
         const certModal = document.getElementById('certificateModal');
         const menuOverlay = document.getElementById('menuOverlay');
         const allCertsModal = document.getElementById('allCertificatesModal');
-        
+
         if (projectModal.classList.contains('active')) {
             closeModal();
         }
@@ -635,32 +666,32 @@ function revealOnScroll() {
     const skillCards = document.querySelectorAll('.skill-card');
     const projectCards = document.querySelectorAll('.project-card');
     const certificateCards = document.querySelectorAll('.certificate-card');
-    
+
     const windowHeight = window.innerHeight;
     const revealPoint = 150;
-    
+
     reveals.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
-        
+
         if (elementTop < windowHeight - revealPoint) {
             element.classList.add('active');
         }
     });
-    
+
     skillCards.forEach(card => {
         const cardTop = card.getBoundingClientRect().top;
         if (cardTop < windowHeight - revealPoint) {
             card.classList.add('active');
         }
     });
-    
+
     projectCards.forEach(card => {
         const cardTop = card.getBoundingClientRect().top;
         if (cardTop < windowHeight - revealPoint) {
             card.classList.add('active');
         }
     });
-    
+
     certificateCards.forEach(card => {
         const cardTop = card.getBoundingClientRect().top;
         if (cardTop < windowHeight - revealPoint) {
@@ -673,11 +704,11 @@ function revealOnScroll() {
 function parallaxEffect() {
     const parallaxSections = document.querySelectorAll('.parallax-section');
     const scrolled = window.pageYOffset;
-    
+
     parallaxSections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
-        
+
         if (scrolled > sectionTop - window.innerHeight && scrolled < sectionTop + sectionHeight) {
             const offset = (scrolled - sectionTop) * 0.05;
             section.style.transform = `translateY(${offset}px)`;
