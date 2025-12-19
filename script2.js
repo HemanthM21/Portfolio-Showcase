@@ -16,7 +16,7 @@ window.addEventListener('load', function () {
 const projects = {
     project0: {
         title: "MindGrid — AI-Powered Life Operating System",
-        image: "images/mindgrid.png", // replace with your actual screenshot path
+        image: "images/p0.png",
         icon: "🧠",
         description: "MindGrid is an AI-powered personal productivity OS designed to understand a user’s life, not just their tasks. It unifies task management, document intelligence, and psychological journaling into one intelligent system that analyzes behavior, priorities, and thoughts to deliver personalized productivity insights.",
         features: [
@@ -41,7 +41,7 @@ const projects = {
             "OCR & AI APIs"
         ],
         challenges: "The biggest challenge was designing a system that combines multiple domains—tasks, documents, and journaling—into a single coherent user experience. Managing AI-driven insights, authentication flows, and real-time UI updates required careful state management and clean API architecture. This was addressed by modular backend routes, token-based authentication, and a component-driven frontend with animation orchestration.",
-        role: "Full Stack Developer & Product Architect — Led the end-to-end development from system design to deployment. Built frontend UI with React and Framer Motion, implemented backend APIs with Node.js and Express, integrated MongoDB Atlas, handled authentication, and coordinated AI-driven features.",
+        role: "Backend Developer & System Architect — Owned and implemented the complete backend architecture, authentication system, AI integrations, API design, and database management using Node.js, Express, and MongoDB Atlas. Handled secure authentication, AI-driven features, and all backend API workflows. Managed deployment with backend on Render and frontend on Vercel. Frontend UI/UX and visual framework were collaboratively developed by my teammate during the hackathon.",
         liveDemo: "https://mindgrid-three.vercel.app/",
         viewCode: "https://github.com/HemanthM21/MINDGRID"
     },
