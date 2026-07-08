@@ -20,9 +20,9 @@ export default function ContactSection() {
         <div className="contact-links">
           <a href="mailto:mhemanth212@gmail.com" className="contact-link">Email Me</a>
           <a
-            href="/assets/Hemanth FullStack CV.pdf"
+            href="/assets/Hemanth Resume Fullstack.pdf"
             className="contact-link"
-            download="Hemanth_FullStack_CV.pdf"
+            download="Hemanth_Resume_Fullstack.pdf"
             target="_blank"
             rel="noreferrer"
           >
