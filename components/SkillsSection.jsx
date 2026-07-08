@@ -86,7 +86,6 @@ export default function SkillsSection() {
               {[
                 'JavaScript',
                 'Java',
-                'Python',
                 'C'
               ].map(s => (
                 <span key={s} className="skill-tag">{s}</span>
