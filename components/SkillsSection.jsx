@@ -14,39 +14,94 @@ export default function SkillsSection() {
           <div className="skill-card">
             <h3>Frontend Development</h3>
             <div className="skill-tags">
-              {['HTML5','CSS3','JavaScript','React','Tailwind CSS','Bootstrap','Responsive Design'].map(s => (
+              {[
+                'React.js',
+                'Next.js',
+                'JavaScript (ES6+)',
+                'HTML5',
+                'CSS3',
+                'Tailwind CSS',
+                'Bootstrap',
+                'EJS',
+                'Responsive Design'
+              ].map(s => (
                 <span key={s} className="skill-tag">{s}</span>
               ))}
             </div>
           </div>
+
           <div className="skill-card">
             <h3>Backend Development</h3>
             <div className="skill-tags">
-              {['Node.js','Express.js','MongoDB','REST APIs','Authentication'].map(s => (
+              {[
+                'Node.js',
+                'Express.js',
+                'REST APIs',
+                'JWT Authentication',
+                'bcryptjs',
+                'Role-Based Access Control',
+                'Socket.io',
+                'Sequelize ORM'
+              ].map(s => (
                 <span key={s} className="skill-tag">{s}</span>
               ))}
             </div>
           </div>
+
           <div className="skill-card">
-            <h3>Tools &amp; Technologies</h3>
+            <h3>Databases</h3>
             <div className="skill-tags">
-              {['Git','GitHub','VS Code','Postman','npm'].map(s => (
+              {[
+                'PostgreSQL',
+                'MongoDB',
+                'MongoDB Atlas',
+                'Mongoose ODM'
+              ].map(s => (
                 <span key={s} className="skill-tag">{s}</span>
               ))}
             </div>
           </div>
+
           <div className="skill-card">
-            <h3>Cloud &amp; Networking</h3>
+            <h3>Tools & Deployment</h3>
             <div className="skill-tags">
-              {['Cloud Computing','Networking','Deployment','CI/CD'].map(s => (
+              {[
+                'Git',
+                'GitHub',
+                'VS Code',
+                'Postman',
+                'Vercel',
+                'Render',
+                'Cloudinary',
+                'Mapbox'
+              ].map(s => (
                 <span key={s} className="skill-tag">{s}</span>
               ))}
             </div>
           </div>
+
+          <div className="skill-card">
+            <h3>Programming Languages</h3>
+            <div className="skill-tags">
+              {[
+                'JavaScript',
+                'Java',
+                'Python',
+                'C'
+              ].map(s => (
+                <span key={s} className="skill-tag">{s}</span>
+              ))}
+            </div>
+          </div>
+
           <div className="skill-card">
             <h3>Currently Learning</h3>
             <div className="skill-tags">
-              {['DevOps','Docker','Kubernetes','AWS','Azure','CI/CD Pipelines','Automation Scripting','Networking','Cybersecurity Tools'].map(s => (
+              {[
+                'Docker',
+                'SIEM',
+                'Log Analysis'
+              ].map(s => (
                 <span key={s} className="skill-tag">{s}</span>
               ))}
             </div>
