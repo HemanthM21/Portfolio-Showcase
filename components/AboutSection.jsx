@@ -22,7 +22,7 @@ export default function AboutSection() {
           complement my full-stack skills.
         </div>
         <div className="about-image">
-          <img src="/images/pic4.jpg" alt="Hemanth" />
+          <img src="/images/pic4.jpeg" alt="Hemanth" />
         </div>
       </div>
     </section>
