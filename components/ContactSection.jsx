@@ -32,8 +32,6 @@ export default function ContactSection() {
         <div className="social-links">
           <a href="https://github.com/HemanthM21" target="_blank" rel="noreferrer" title="GitHub">GH</a>
           <a href="https://linkedin.com/in/mada-hemanth-0774892ab" target="_blank" rel="noreferrer" title="LinkedIn">IN</a>
-          <a href="https://x.com/nameissunny3" target="_blank" rel="noreferrer" title="Twitter">X</a>
-          <a href="https://www.instagram.com/nameissunny.3/" target="_blank" rel="noreferrer" title="Instagram">IG</a>
         </div>
       </div>
     </section>
